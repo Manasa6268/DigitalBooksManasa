@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "MyAzureFunction": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7031",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "connection"
+      }
+    }
+  }
+}

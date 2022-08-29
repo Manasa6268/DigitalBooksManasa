@@ -1,0 +1,85 @@
+.PaymentBox
+{
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #ffffff;
+    width: 100%;
+}
+h3 
+{
+  text-align: center;
+}
+input
+{
+  width: 500px;
+  
+}
+
+body{
+  background: #ffffff !important;
+}
+ .card { 
+  width: 780px;
+  height:320px;
+  margin-left:250px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+} 
+input{
+  width: 358px;
+}
+button
+{
+  width: 175px;
+  
+}
+.emptydiv
+{
+  height: 10px;
+}
+h2{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+}
+h1{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+  font-size: small;
+}
+.loginfields
+{
+  margin-left: 50px;
+}
+
+.headings
+{
+  margin-left: 62px;
+}
+
+table tbody tr td{
+  color: black;
+  background-color:white;
+  overflow: hidden;
+ 
+}
+table
+{
+  margin-left: 10px;
+ 
+}
+th{
+  text-align: center;
+}
+table thead tr
+{
+  border: #ffffff;
+}
+
+.logoimg
+{
+  height: 100px;
+}

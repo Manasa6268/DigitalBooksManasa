@@ -1,0 +1,34 @@
+.displayboxbox
+{
+  padding-top: 0;
+    padding-bottom: 0;
+    background: #ffffff;
+    
+}
+.card
+{
+  width: 18rem; 
+  height:50rem;
+  height: 100%;
+  width: 50%;
+  margin-left: 25px;
+}
+.searchresults
+{
+  text-align: center;
+}
+h2{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+}
+.emptydiv
+{
+  height: 10px;
+}
+.card-img-top
+{
+  height: 50%;
+  
+}

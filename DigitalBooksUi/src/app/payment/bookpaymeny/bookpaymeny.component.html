@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="PaymentBox">
+
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+      <div class="headings">
+        <div class="emptydiv"></div>
+        <div class="row">
+          <div class="col">
+            <h2> Payment </h2>
+          </div>
+          <div class="col orderfields">
+            <button [disabled]="loading" class="btn btn-success" id="histbtn" [hidden]=btnhide
+              (click)="viewhistory(payment.email)">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              View Payment History
+            </button>
+          </div>
+        </div>
+        <div class="emptydiv"></div>
+      </div>
+      <div class="card-body">
+        <form class="loginfields">
+
+          <div class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control" [(ngModel)]="payment.name" />
+
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" class="form-control" (change)="onChangeEvent($event)"
+                  [(ngModel)]="payment.email" />
+
+              </div>
+            </div>
+            <div class="container col orderfields">
+              <h2 class="orderhead"> ORDER </h2>
+              <hr>
+              <img src="../../../assets/img/book1.png" class="card-img-top img-responsive" alt="Skyscrapers"
+                style="height: 70% ;width: 40%;" />
+              <h1>{{book.title}}</h1>
+              <h1> {{book.price}} </h1>
+              <h1 class="orderfoot">Total: {{book.price}} </h1>
+            </div>
+          </div>
+          <div class="emptydiv"></div>
+          <div class="form-group">
+            <button [disabled]="loading" class="btn btn-primary" (click)="onSubmit(book.bookId)">
+              <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+              Pay Now
+            </button>
+
+            <!-- <a routerLink="/register" class="btn btn-link">Register</a> -->
+          </div>
+
+        </form>
+
+
+      </div>
+    </div>
+
+    <div class="vl"></div>
+    <div>
+
+
+    </div>
+  </section>
+</body>
+
+</html>

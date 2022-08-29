@@ -1,0 +1,67 @@
+.CreateBookBox
+{
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #ffffff;
+    width: 100%;
+}
+
+body{
+  background: #ffffff !important;
+}
+ .card { 
+  width: 60%;
+  height: 100%;
+  margin-left:250px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+} 
+.headerbtns
+{
+  margin-left: 250px;
+    margin-top: -25px;
+}
+button
+{
+  width: 100px;
+  margin-top: 25px
+}
+.btncreate
+{
+  width: 350px;
+  margin-top: 25px;
+  margin-left:150px;
+}
+.emptydiv
+{
+  height: 10px;
+}
+h2{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+}
+h1{
+  
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+  font-size: small;
+}
+.loginfields
+{
+  margin-left: 50px;
+}
+.headings
+{
+  margin-left: 62px;
+}
+.emptydivwidth
+{
+  width: 10px;
+}
+.alert
+{
+  color: red;
+}

@@ -1,0 +1,103 @@
+table tbody tr td{
+  color: black;
+  background-color:white;
+  overflow: hidden;
+  width: 100px;
+}
+table
+{
+  margin-left: 10px;
+  table-layout: fixed;
+}
+.CreateBookBox
+{
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #ffffff;
+    width: 100%;
+}
+
+body{
+  background: #ffffff !important;
+}
+ .card { 
+  width: 1000px;
+  height: 430px;
+  margin-left:150px;
+  margin-bottom: 100px;
+} 
+.headerbtns
+{
+  margin-left: 650px;
+    margin-top: -25px;
+}
+button
+{
+  width: 120px;
+  margin-top: 25px
+}
+.btncreate
+{
+  width: 350px;
+  margin-top: 25px;
+  margin-left:100px;
+}
+.emptydiv
+{
+  height: 10px;
+}
+h2{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+  margin-left: 50px;
+}
+h3{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+}
+.welcomemsg
+{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+}
+h1{
+  
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+  font-size: small;
+}
+.loginfields
+{
+  margin-left: 50px;
+}
+.headings
+{
+  margin-left: 62px;
+}
+th{
+  text-align: center;
+}
+tr{
+  text-align: center;
+  background-color: black;
+}
+table thead tr
+{
+  border: #ffffff;
+}
+header
+{
+  padding: 24px 0 25px;
+}
+btn-info{
+  color: #ffffff;
+}
+.btn-default.btn-on.active{background-color: #2b28dd;color: white;}
+.btn-default.btn-off.active{background-color: #DA4F49;color: white;}

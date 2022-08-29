@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="card shadow p-3 mb-5 bg-white rounded">
+    <div class="row form-inline">
+      <div class="container col mb-2">
+        <h2> Create Books </h2>
+      </div>
+      <div class="btns col mx-sb-3 mb-2 headerbtns">
+        <button class="btn btn-primary" (click)="clickMe()">All Books</button>
+        <button class="btn btn-danger" (click)="clickMe()">Cancel</button>
+      </div>
+    </div>
+    <div class="emptydiv"></div>
+    <div class="card-body">
+      <form #form="ngForm" class="form-inline">
+        <div class="row">
+          <div class="col">
+            <div class="form-group mb-2">
+              <label for="title">Title</label>
+              <input type="text" name="title" id="title" class="form-control" required minlength="4"
+                [(ngModel)]="book.title" #title="ngModel" />
+              <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert">
+                <div *ngIf="title.errors?.['required']">
+                  Title is required.
+                </div>
+                <div *ngIf="title.errors?.['minlength']">
+                  Title must be at least 4 characters long.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group mx-sb-3 mb-2">
+              <label for="category">Category</label>
+              <input type="text" name="category" id="category" class="form-control" required minlength="4"
+                [(ngModel)]="book.category" #category="ngModel" />
+              <div *ngIf="category.invalid && (category.dirty || title.touched)" class="alert">
+                <div *ngIf="category.errors?.['required']">
+                  Category is required.
+                </div>
+                <div *ngIf="category.errors?.['minlength']">
+                  Category must be at least 4 characters long.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="emptydiv"></div>
+        <div class="row">
+          <div class="form-group col">
+            <label for="image">Image</label>
+            <input class="form-control" type="file" (change)="onChange($event)" [(ngModel)]="book.logo"
+              [ngModelOptions]="{standalone: true}">
+            <button (click)="onUploadFile()" class="btn btn-success">
+              Upload
+            </button>
+          </div>
+          <div class="form-group col">
+            <label for="price">Price</label>
+            <input type="number" name="price" class="form-control" [(ngModel)]="book.price" />
+          </div>
+        </div>
+        <div class="emptydiv"></div>
+        <div class="row">
+          <div class="form-group col">
+            <label for="active">Active</label>
+            <div class="emptydiv"></div>
+            <label>
+              <input type="radio" value="1" name="active" [(ngModel)]="book.active">
+              <span>YES</span>
+            </label>
+            <div class="emptydivwidth"></div>
+            <label>
+              <input type="radio" value="0" name="active" [(ngModel)]="book.active">
+              <span>NO</span>
+            </label>
+          </div>
+          <div class="form-group col">
+            <label for="content">Content</label>
+            <textarea type="text" name="content" id="content" class="form-control" required minlength="15"
+              [(ngModel)]="book.content" #content="ngModel">
+            </textarea>
+            <div *ngIf="content.invalid && (content.dirty || content.touched)" class="alert">
+              <div *ngIf="content.errors?.['required']">
+                Content is required.
+              </div>
+              <div *ngIf="content.errors?.['minlength']">
+                Content must be at least 15 characters long.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="emptydiv"></div>
+        <div class="row">
+          <div class="form-group col">
+            <label for="publisher">Publisher</label>
+            <input type="text" name="publisher" id="publisher" class="form-control" required minlength="4"
+              [(ngModel)]="book.publisher" #publisher="ngModel" />
+            <div *ngIf="publisher.invalid && (publisher.dirty || publisher.touched)" class="alert">
+              <div *ngIf="publisher.errors?.['required']">
+                publisher is required.
+              </div>
+              <div *ngIf="publisher.errors?.['minlength']">
+                publisher must be at least 4 characters long.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="emptydiv"></div>
+        <div class="form-group">
+          <button [disabled]="loading" class="btn btn-danger btncreate" (click)="onSubmit()">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            {{ btntxt }}
+          </button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

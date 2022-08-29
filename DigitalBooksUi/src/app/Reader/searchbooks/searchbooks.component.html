@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <div class="card shadow p-3 mb-5 bg-white rounded">
+    <h2> Search Books </h2>
+
+    <div class="card-body">
+      <form class="form-inline">
+        <div class="emptydiv"></div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group mb-2">
+              <label class="center-block">Title:
+                <input class="form-control" placeholder="Enter Title here" name="title"
+                  [(ngModel)]="book.title === 'null' ? '' : book.title">
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group mx-sb-3 mb-2">
+              <label class="center-block">Authour:
+                <input class="form-control" placeholder="Enter Author Name here" name="author"
+                  [(ngModel)]="book.authorName === 'null' ? '' : book.authorName">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="emptydiv"></div>
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+              <label class="center-block">Publisher:
+                <input class="form-control" placeholder="Enter Publisher here" name="publisher"
+                  [(ngModel)]="book.publisher === 'null' ? '' : book.publisher">
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label class="center-block">Published Date:
+                <input type="date" class="form-control" id="mydate" value="2022-01-08" name="publishdate"
+                  [(ngModel)]="book.publishDate">
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="emptydiv"></div>
+
+        <div class="btns">
+          <button class="btn btn-danger btn1" (click)="searchbooks()"><i
+              class="fa-solid fa-magnifying-glass"></i>Search</button>
+        </div>
+        <div class="emptydiv"></div>
+      </form>
+    </div>
+
+  </div>
+</body>
+
+</html>

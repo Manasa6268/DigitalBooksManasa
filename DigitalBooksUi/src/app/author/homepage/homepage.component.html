@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <div class="container">
+        <div class="row">
+          <article class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="navbar-brand navbar-brand_">
+              <a href="index.html"><img src="../../../assets/img/logo.png" alt="logo" /></a>
+            </h1>
+            <div class="menuBox clearfix">
+              <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+                <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
+                  <li class="active"><a [routerLink]="['/']">Home</a></li>
+                  <li><a [routerLink]="['/homepage']">View Books</a></li>
+                  <li><a [routerLink]="['/login']">Logout</a></li>
+
+                </ul>
+
+              </nav>
+
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </header>
+  </div>
+  <div class="emptydiv"></div>
+  <div class="row form-inline">
+    <div class="col">
+      <h2> My Books</h2>
+    </div>
+    <div class="btns col mx-sb-3 mb-2 headerbtns">
+      <button class="btn btn-primary" (click)="ClickMe()">Add Books</button>
+
+    </div>
+  </div>
+  <div class="emptydiv"></div>
+  <div class="table responsive">
+
+    <table class="table table-bordered table-dark" *ngIf="bookdetails.length">
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Book Name</th>
+          <th>Content</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Publisher</th>
+          <th>Published Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of bookdetails">
+
+          <td> <img src={{book.logo}} class="card-img-top img-responsive" alt="Cover Page" />
+          </td>
+          <td>
+            <a type="button">{{book.title}}</a>
+          </td>
+          <td class="text-truncate" style="max-width: 350px">{{ book.content }}</td>
+          <td>{{ book.price }}</td>
+          <td>{{ book.category }}</td>
+          <td>{{ book.publisher }}</td>
+          <td>{{ book.publishDate }}</td>
+          <td>
+            <div class="row">
+              <input type="checkbox" class="col switch-input" id="blockcheckbox"
+                [checked]="book.active == 1 ? true : false" (click)="actionBtnClick(book.bookId,book.active)"
+                style="width: 25px;height: 25px;">
+              <i class="col fa fa-edit fa-2x" [routerLink]="['/createbook',book.bookId]" style="color: green;"
+                aria-hidden="true"></i>
+              <i class="col fa fa-trash fa-2x" (click)="DeleteBook(book.bookId)" style="color: red;"
+                aria-hidden="true"></i>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+
+</body>
+
+</html>

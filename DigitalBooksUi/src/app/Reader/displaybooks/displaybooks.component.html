@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="main">
+    <header>
+      <div class="container">
+        <div class="row">
+          <article class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="navbar-brand navbar-brand_">
+              <a href="index.html"><img src="../../../assets/img/logo.png" alt="logo" /></a>
+            </h1>
+            <div class="menuBox clearfix">
+              <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
+                <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
+                  <li class="active"><a [routerLink]="['/']">Home</a></li>
+                  <li class="sub-menu">
+                    <a (click)="clickabout()">About us<span></span></a>
+                  </li>
+                  <li><a (click)="clicksearch()">Search Books</a>
+                  </li>
+                  <li><button class="btn btn-primary" (click)="clicklogin()">Add Books</button></li>
+                  <li class="sub-menu">
+                    <a (click)="clickabout()">Contact us<span></span></a>
+                  </li>
+                </ul>
+
+              </nav>
+
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </header>
+  </div>
+  <h2>{{ displaybooks }}</h2>
+  <section class="displayboxbox">
+    <div *ngIf="books.length">
+      <div class="row form-inline">
+        <div class="col">
+          <h2>Search Results</h2>
+        </div>
+        <div class="btns col mx-sb-3 mb-2 headerbtns">
+          <button class="btn btn-danger" (click)="clicksearch()">Cancel</button>
+        </div>
+      </div>
+      <div style="height: 30px;"></div>
+      <div class="searchresults row row-cols-1 row-cols-md-4 g-4">
+        <div class="col" *ngFor="let book of books">
+          <div class="card">
+            <img src="{{book.logo}}" class="card-img-top img-responsive" alt="Skyscrapers" />
+            <div class="card-body">
+              <h5 class="card-title">{{book.title}}</h5>
+              <p class="card-text">By {{book.authorName}}
+              </p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted"><button class="btns btn btn-primary" (click)="clickMe(book.bookId)">Add to
+                  Cart</button></small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </section>
+  <div class="emptydiv"></div>
+  <div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <article class="col-lg-12 col-md-12 col-sm-12">
+            <p>
+              <span>Libuno</span> © <em id="copyright-year">2022</em> |
+              <a href="index-5.html">Privacy Policy</a>
+            </p>
+            <ul>
+              <li>
+                <a href="#"><img src="../../../assets/img/follow_icon1.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../../../assets/img/follow_icon2.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../../../assets/img/follow_icon3.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="../../../assets/img/follow_icon4.png" alt="" /></a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <!-- {%FOOTER_LINK} -->
+    </footer>
+  </div>
+</body>
+
+</html>

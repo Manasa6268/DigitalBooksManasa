@@ -1,0 +1,64 @@
+.RegisterBox
+{
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #ffffff;
+    width: 100%;
+}
+h3 
+{
+  text-align: center;
+}
+input
+{
+  width: 500px;
+  
+}
+body{
+  background: #ffffff !important;
+}
+ .card { 
+  width: 600px;
+  height: 600px;
+  margin-left:325px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+} 
+input{
+  width: 358px;
+}
+button
+{
+  width: 358px;
+  margin-top: 25px;
+  margin-left: 57px;
+}
+.emptydiv
+{
+  height: 10px;
+}
+h2{
+  color: black;
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+  margin-left: 75px;
+}
+h1{
+  margin-bottom: 0px;
+  font-family: Georgia, serif;
+  text-transform: initial;
+  font-size: small;
+}
+.loginfields
+{
+  margin-left: 57px;
+}
+.headings
+{
+  margin-left: -6px;
+}
+.btn-link{
+  text-decoration:none;
+}
+
